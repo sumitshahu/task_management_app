@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 const BoardDetailPage = () => {
-  const { id } = useParams(); // Get board ID from the URL
+  const { id } = useParams(); 
   const [board, setBoard] = useState(null);
 
   useEffect(() => {
-    // Here, you would fetch board details from the backend using the `id`
-    // We'll mock this for now.
+    
     const mockBoard = { id, name: `Board ${id}`, lists: [{ name: 'List 1' }, { name: 'List 2' }] };
     setBoard(mockBoard);
   }, [id]);
